@@ -16,7 +16,7 @@ form.addEventListener('submit', async event => {
 
       const blank = window.open('about:blank', '_blank');
       const url2 =
-        'https://mathchemistryforstudents.ml' +
+        window.location.href.substr(0).slice(0, -16) +
         __uv$config.prefix +
         __uv$config.encodeUrl(url);
       const doc = blank.document;
