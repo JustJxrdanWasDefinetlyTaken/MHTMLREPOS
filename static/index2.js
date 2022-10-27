@@ -22,6 +22,10 @@ form.addEventListener('submit', async event => {
       const doc = blank.document;
       const iframe = doc.createElement('iframe');
       const style = iframe.style;
+      var script = document.createElement("script");
+      var script2 = document.createElement("script");
+      var script3 = document.createElement("script");
+      var script4 = document.createElement("script");
       const img = doc.createElement('link');
       doc.title = 'MichaelHTML';
       img.rel = 'icon';
@@ -31,7 +35,19 @@ form.addEventListener('submit', async event => {
       style.border = style.width = 'none';
       style.width = style.height = '100%';
       style.top = style.bottom = style.left = style.right = 0;
+      script.setAttribute( "src", "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8246140205828768" );
+      script.setAttribute("async", true);
+      script.setAttribute("crossorigin", true);
+      script2.setAttribute( "src", "https://www.googletagmanager.com/gtag/js?id=UA-121776487-1");
+      script2.setAttribute("async", true);
+      script3.setAttribute( "src", "https://michaelhtml.gq/google.js");
+      script4.setAttribute( "src", "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js");
+      console.log('done')
       doc.body.appendChild(iframe);
+      doc.body.appendChild(script)
+      doc.body.appendChild(script2)
+      doc.body.appendChild(script3)
+      doc.body.appendChild(script4)
     });
 });
 
